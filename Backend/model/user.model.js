@@ -3,9 +3,9 @@ const mongoose=require("mongoose")
 
 const userSchema=mongoose.Schema({
     name:String,
-    mobile:Number,
     email:String,
-    password:String
+    password:String,
+    mobile:Number
     },
     {
         versionKey:false

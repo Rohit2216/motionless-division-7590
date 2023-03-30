@@ -1,4 +1,5 @@
 const express=require("express")
+
 // const mongoose=require("mongoose")
 
 const {connection}=require("./data")
@@ -11,6 +12,9 @@ app.use(express.json())
 app.use(cors())
 
 app.use("/users",userRouter)
+
+
+
 
 app.listen(process.env.port,async()=>{
     try{
