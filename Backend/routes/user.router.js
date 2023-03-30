@@ -1,6 +1,6 @@
 const express=require("express")
 const userRouter=express.Router()
-const {UserModel}=require("../model/user.model")
+const {UserModel}=require("../model/product.model")
 const jwt=require("jsonwebtoken")
 const bcrypt=require("bcrypt")
 
@@ -10,7 +10,7 @@ userRouter.post("/register",async(req,res)=>{
     try {
         bcrypt.hash(password, 5, async (err, hash)=> {
             // Store hash in your password DB.
-            const user=new UserModel({email,name,mobile,password:hash})
+            const user= new UserModel({email,name,mobile,password:hash})
 
             await user.save()
         res.status(200).send({"msg":"register successfully"})
@@ -50,7 +50,7 @@ userRouter.post("/login",async(req,res)=>{
 
 userRouter.get("/details",(req,res)=>{
     // const {token}=req.query;
-    const token=req.headers.authorization.split(" ")[1]
+    const token=req.headers.authorization
     jwt.verify(token, 'shhhhh', function(err, decoded) {
         decoded? res.status(200).send("users details"):res.status(400).send({"msg":"login required,users details not match"}) // bar
       });
