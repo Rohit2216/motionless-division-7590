@@ -1,14 +1,18 @@
 const express=require("express")
+
+// const mongoose=require("mongoose")
+
 const {connection}=require("./data")
+const app=express()
+const {userRouter}=require("./routes/user.router")
 require("dotenv").config()
 
-const {userRouter}=require("./routes/user.router")
-const app=express()
-
+const cors=require("cors")
 app.use(express.json())
-
+app.use(cors())
 
 app.use("/users",userRouter)
+
 
 
 
