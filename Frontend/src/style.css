@@ -549,6 +549,13 @@
   margin-top:-1px;
 }
 
+#black-box > div:nth-child(1) a{
+  border:none;
+  outline:none;
+  text-decoration: none;
+  color:white;
+}
+
 
 #footer {
   margin-top: 50px;
