@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        .create {
+            margin: 50px auto;
+            width: 30%;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: black;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 50%;
+            max-width: 500px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #aaa;
+            cursor: pointer;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .para-2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: white;
+
+        }
+        .para-2 a{
+            text-decoration: none;
+            color:red;
+            font-weight: bolder;
+        }
+
+        #btn{
+            margin-left:20px;
+            padding:5px;
+            width:100px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #btn:hover{
+            background-color:green;
+            color:white;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="create">
+      <h1>Create an account here!</h1>
+      <form id="register-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+  
+        <label for="mobile">Mobile Number:</label>
+        <input type="number" id="mobile" name="mobile" required><br>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+  
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+  
+        <input type="checkbox" onclick="myFunction()">Show Password
+  
+        <button id="btn" type="submit">Register</button>
+
+        <p class="para-2">
+            Already have an account? <a href="login.html">Login here</a>
+        </p>
+      </form>
+    </div>
+  
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Registration Successful!</h2>
+        <p>Your account has been created.</p>
+        <p>Thank you for registering.</p>
+      </div>
+    </div>
+  
+    <script>
+      function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+  
+      const form = document.querySelector("#register-form");
+      if (form) {
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+  
+          const payload = {
+            name: form.elements.username.value,
+            mobile: form.elements.mobile.value,
+            email: form.elements.email.value,
+            password: form.elements.password.value,
+          };
+          // console.log(payload);
+  
+          try {
+            const response = await fetch("http://localhost:8800/users/register", {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json",
+              },
+              body: JSON.stringify(payload),
+            });
+            const data = await response.json();
+            console.log(data);
+            alert(data.msg);
+            window.location.href = "login.html";
+          } catch (error) {
+            console.error(error);
+            alert("Registration failed. Please try again later.");
+          }
+        });
+      }
+    </script>
+  </body>
+  
+</html>  
+
+
+<!-- try {
+    const response = await fetch("http://localhost:8800/users/register", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
+      alert("Registration successful. Please log in.");
+      window.location.href = "login.html";
+    } else {
+      throw new Error("Network response was not ok.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Registration failed. Please try again later.");
+  } -->
