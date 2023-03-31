@@ -1,10 +1,23 @@
 const mongoose=require("mongoose")
 
 const userSchema=mongoose.Schema({
-    name:String,
-    email:String,
-    password:String
-    },
+    
+        title: String,
+        link: String,
+        condition: String,
+        price: {
+          currency: String, 
+          value: Number
+        },
+        shipping: String,
+        location: String,
+        extensions: [
+          {
+            name: String
+          }
+        ],
+        thumbnail: String
+      },
     {
         versionKey:false
     }
