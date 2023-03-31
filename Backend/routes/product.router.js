@@ -14,18 +14,18 @@ productRouter.get("/", async (req, res) => {
 
 productRouter.post("/create", async (req, res) => {
     const payload = req.body
-    const product_note = new ProductModel(payload)
-    await product_note.save()
-    res.send({ "msg": "Note Created" })
+    const product_things= new ProductModel(payload)
+    await product_things.save()
+    res.send({ "msg": "Products Created" })
 })
 
 
 productRouter.patch("/update/:productId", async (req, res) => {
     const payload=req.body
-    const productId=req.params.noteId
+    const productId=req.params.productId
     try{
         await ProductModel.findByIdAndUpdate({_id:productId},payload)
-        res.status(200).send({"msg":"note updated succesfuly"})
+        res.status(200).send({"msg":"product updated succesfuly"})
 
     }catch(error){
         res.status(400).send({"msg":error.message})
@@ -35,10 +35,10 @@ productRouter.patch("/update/:productId", async (req, res) => {
 
 productRouter.delete("/delete/:productId", async (req, res) => {
     // const payload=req.body
-    const productId=req.params.noteId
+    const productId=req.params.productId
     try{
         await ProductModel.findByIdAndDelete({_id:productId})
-        res.status(200).send({"msg":"note deleted succesfuly"})
+        res.status(200).send({"msg":"product deleted succesfuly"})
 
     }catch(error){
         res.status(400).send({"msg":error.message})
