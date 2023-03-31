@@ -1,6 +1,6 @@
 const express=require("express")
 const userRouter=express.Router()
-const {UserModel}=require("../model/product.model")
+const {UserModel}=require("../model/user.model")
 const jwt=require("jsonwebtoken")
 const bcrypt=require("bcrypt")
 
@@ -32,9 +32,9 @@ userRouter.post("/login",async(req,res)=>{
         bcrypt.compare(password, user.password, async (err, result)=> {
             // result == true
             if(result){
-                res.status(200).send({"msg":"login successfully","token":jwt.sign({"userId":user._id}, 'shhhhh')})
+                res.status(200).send({msg:"login successfully",token:jwt.sign({"userId":user._id}, 'shhhhh')})
             }else{
-                res.status(400).send({"msg":"Wrong Credentials"})
+                res.status(400).send({msg:"Wrong Credentials"})
 
             }
         });
