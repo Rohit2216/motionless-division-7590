@@ -6,130 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Account</title>
-  <style>
-    body {
-      background-image: url("./images/bg.jpg");
-      background-repeat: no-repeat;
-      /* background-position: ;
-       */
-      
-      background-size: cover;
-    }
-
-    .create {
-      margin: 50px auto;
-      width: 30%;
-      border: 1px solid #ccc;
-      padding: 20px;
-      border-radius: 5px;
-      background-color: black;
-      text-align: center;
-      color: white;
-      border-radius: 10px;
-
-    }
-
-    .popup {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      display: none;
-    }
-
-    .popup-content {
-      background-color: #fff;
-      border-radius: 5px;
-      padding: 20px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      width: 50%;
-      max-width: 500px;
-    }
-
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 30px;
-      font-weight: bold;
-      color: #aaa;
-      cursor: pointer;
-    }
-
-    form {
-      display: inline-block;
-      text-align: left;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="number"] {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      width: 100%;
-      margin-bottom: 20px;
-    }
-
-    input[type="submit"] {
-      background-color: #4CAF50;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #3e8e41;
-    }
-
-    input[type="checkbox"] {
-      margin-right: 5px;
-    }
-
-    .para-2 {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 1.1rem;
-      color: white;
-
-    }
-
-    .para-2 a {
-      text-decoration: none;
-      color: red;
-      font-weight: bolder;
-    }
-
-    #btn {
-      margin-left: 20px;
-      padding: 5px;
-      width: 100px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    #btn:hover {
-      background-color: green;
-      color: white;
-      font-weight: bolder;
-    }
-  </style>
+  <link rel="stylesheet" href="./src/login.css">
 </head>
 
 <body>
@@ -154,49 +31,12 @@
   </div>
 
 
-  <script>
-    function myFunction() {
-      var x = document.getElementById("password");
-      if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
-      }
-    }
-
-
-    const form = document.querySelector("#login-form");
-    if (form) {
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        const payload = {
-          email: form.elements.email.value,
-          password: form.elements.password.value
-        };
-        // console.log(payload);
-
-        fetch("http://localhost:8800/users/login", {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json"
-          },
-          body: JSON.stringify(payload)
-
-        }).then(res => res.json())
-          .then(res => {
-            localStorage.setItem("token", res.token);
-            console.log(res);
-            alert(res.msg);
-            window.location.href = "index.html";
-          })
-          .catch(err => console.log(err))
-      });
-    }
-  </script>
+  
 </body>
 
 </html>
+
+<script src="./script/login.js"></script>
 
 
 <!-- try {

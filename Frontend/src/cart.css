@@ -1,0 +1,214 @@
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cart-items {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width:100%;
+    flex-wrap: wrap;
+  }
+  
+  .cart-item {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width:100%;
+  }
+  
+  .item-image {
+    max-width: 100%;
+    max-height: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .item-name {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .item-price {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .buy-now-button {
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    margin-bottom:100px;
+  }
+  
+  .buy-now-button:hover {
+    background-color: #e6b800;
+  }
+  .remove-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .buy-now-button{
+      background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 12px;
+    height:4  0px;
+  }
+  .remove-button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 12px;
+  }
+  
+  .buy-now-button:hover{
+      background-color: green;
+  
+  }
+  .remove-button:hover {
+    background-color: red;
+  }
+  
+
+  .container {
+  
+    /* width: 98%; */
+    /* max-width: 1000px; */
+    margin:auto;
+    text-align: center;
+    /* border:2px solid red; */
+  }
+  
+  /* Style the navigation bar */
+  #navbar {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f3f3;
+    padding: 10px;
+     
+    /* border:2px solid red; */
+  }
+  
+  /* Style the brand logo */
+  #navbar img:first-of-type {
+    height: 40px;
+  }
+  
+  /* Style the links in the navigation bar */
+  #navbar a {
+    color: #000000;
+    text-decoration: none;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style the icon in the location link */
+  #navbar a i {
+    margin-right: 5px;
+  }
+  
+  /* Style the images in the links */
+  #navbar a img {
+    height: 20px;
+    margin-right: 5px;
+  }
+
+
+
+  #search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    /* max-width: 1120px; */
+    margin: 0 auto;
+    /* padding: 10px; */
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: -10px;
+    /* border:2px solid red; */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);   */
+  }
+  
+  #search i {
+    margin-left: 50px;
+  }
+  
+  #search input[type="text"] {
+    flex: 0.5;
+    padding: 10px;
+    width: 200px;
+    border: none;
+    margin-left: -100px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    /* color: #333; */
+    background-color: transparent;
+    outline: none;
+  }
+  
+  #search input[type="text"]::placeholder {
+    color: #ccc;
+  
+  }
+  
+  #search img {
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+    border-radius: 50%;
+  }
+  
+  #search a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100px;
+    /* color: #333; */
+    text-decoration: none;
+  }
+  
+  #search a i {
+    /* width:px; */
+    font-size: 20px;
+    margin-right: 5px;
+  }
+  
+
+  #titlebar{
+    display: flex;
+    justify-content: space-evenly;
+    border:2px solid black;
+    font-weight: bolder;
+    color: white;
+    background: black;
+    font-size: 20px;
+}
