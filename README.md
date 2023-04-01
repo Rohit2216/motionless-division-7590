@@ -1,6 +1,6 @@
 # motionless-division-7590
 
-# HealthKart.com_Clone_Project
+# sephora.com_Clone_Project
 ---
 
  This project is a clone of HealthKart.com which is an online portal for Dietary supplements and health devices in the Health care industry in India. Prashant Tandon and Sameer Maheshwari founded the company in 2011.
@@ -14,12 +14,15 @@ The tech Stack we used for creating this webiste are:-
 + HTML
 + CSS
 + Javascript
++ Node JS
++ Express
++ MongoDB
 
 
 ## Landing Page
 -----
 
-The Landing page of HealthKart.com displays the navigation bar for products, Learn about a particular product, pricing for the product, Cart Page and the login & signup part, along with the Flash Sale,   Trending Now Products, Popular in Various categories, Just launched Products.
+The Landing page of sephora.com displays the navigation bar for products, Learn about a particular product, pricing for the product, Cart Page and the login & signup part, along with the Popular in Various categories, Just launched Products.
 
 
 ![landing page](https://github.com/Rohit2216/gas-scarecrow-3264/blob/main/images/2023-01-28%20(2).png?raw=true  "Logo Title Text 1")
