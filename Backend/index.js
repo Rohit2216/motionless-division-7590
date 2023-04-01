@@ -6,12 +6,12 @@ require("dotenv").config();
 
 const cors = require("cors");
 const { productRouter } = require("./routes/product.router");
-const { authenticate } = require("./middleware/middleware.auth");
+// const { authenticate } = require("./middleware/middleware.auth");
 app.use(express.json());
 app.use(cors());
 
 app.use("/users", userRouter);
-app.use(authenticate);
+// app.use(authenticate);
 app.use("/product", productRouter);
 
 app.listen(process.env.PORT, async () => {
