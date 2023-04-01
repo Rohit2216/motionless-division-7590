@@ -1,22 +1,11 @@
 const mongoose=require("mongoose")
 
 const userSchema=mongoose.Schema({
-    
-        title: String,
-        link: String,
-        condition: String,
-        price: {
-          currency: String, 
-          value: Number
-        },
-        shipping: String,
-        location: String,
-        extensions: [
-          {
-            name: String
-          }
-        ],
-        thumbnail: String
+        name:String,
+        title:String,
+        price:Number,
+        image:String
+
       },
     {
         versionKey:false

@@ -36,7 +36,7 @@
             <i class="fa fa-magnifying-glass" style="color: #e246cd;"></i>
             <input type="text" placeholder="Search...">
             <img src="./images/Beauty Art.jpeg" alt="">
-            <i class="fa-solid fa-bag-shopping" style="color: #ed02c2;"></i>
+            <a href="./cart.html"><i class="fa-solid fa-bag-shopping" style="color: #ed02c2;"></i></a>
             <a href="./signup.html">
 
                 <i class="fas fa-sign-in-alt"></i>
@@ -636,19 +636,4 @@
 
 </html>
 
-<script>
-    let counter = 1;
-    setInterval(function () {
-        document.getElementById("radio" + counter).checked = true;
-        counter++;
-        if (counter > 6) {
-            counter = 1;
-        }
-    }, 2500);
-
-    const subscribeBtn = document.querySelector('#subs button');
-
-    subscribeBtn.addEventListener('click', function () {
-        alert('Thank you for subscribing! GET THE LATEST NEWS & OFFERS IN BEAUTY & FASHION');
-    });
-</script>
+<script src="./script/index.js"></script>
