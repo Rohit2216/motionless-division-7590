@@ -80,6 +80,7 @@ function displayCartItems() {
 
     const buyNowButton = document.createElement('button');
   buyNowButton.classList.add('buy-now-button');
+  
   buyNowButton.textContent = 'Buy Now';
 
 
@@ -87,6 +88,7 @@ function displayCartItems() {
   buyNowButton.addEventListener('click', () => {
     // window.location.href="payment.html"
     // Implement logic to handle the "Buy Now" functionality
+    window.location.href="payment2.html"
     console.log('Buy Now clicked');
     
   });
