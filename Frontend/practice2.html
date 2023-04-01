@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <div class="container"></div>
+
+    <script>
+       function displayProducts() {
+  fetch("https://6426d6b4d24d7e0de47989b0.mockapi.io/beauty")
+    .then(response => response.json())
+    .then(data => {
+      const containerElement = document.querySelector('.container');
+
+      if (Array.isArray(data)) {
+        data.forEach(product => {
+          const productElement = document.createElement("div");
+          productElement.classList.add("product");
+
+          const imageElement = document.createElement("img");
+          imageElement.classList.add("product-image");
+          imageElement.src = product.products;
+          imageElement.alt = product.name;
+          productElement.appendChild(imageElement);
+
+          const nameElement = document.createElement("h2");
+          nameElement.classList.add("product-name");
+          nameElement.textContent = product.name;
+          productElement.appendChild(nameElement);
+
+          const priceElement = document.createElement("p");
+          priceElement.classList.add("product-price");
+          priceElement.textContent = `$${product.price}`;
+          productElement.appendChild(priceElement);
+
+          // Add "Add to Cart" button
+          const buttonElement = document.createElement("button");
+          buttonElement.textContent = "Add to Cart";
+          buttonElement.addEventListener("click", () => {
+            addToCart(product);
+          });
+          productElement.appendChild(buttonElement);
+
+          containerElement.appendChild(productElement);
+        });
+      }
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
+
+function addToCart(product) {
+  // Implement adding product to cart here
+  console.log(`Product "${product.name}" added to cart`);
+  alert("product added successfully")
+}
+
+displayProducts();
+
+    </script>
+</body>
+</html>
