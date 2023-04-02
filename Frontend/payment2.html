@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pepperfry Address/Payment </title>
+    <title>Sephora Address/Payment </title>
     <link rel="website icon" type="png"
      href="./images/wesiteIcon.jpeg">
     <link rel="stylesheet" href="src/payment.css">
@@ -70,24 +70,33 @@
                 </div>
 
                 <div class="inputBox">
-                    <span>Name on Card :</span>
-                    <input type="text" id="cardname" placeholder="Full Name" required>
+                    <!-- <span>Name on Card :</span> -->
+                    <!-- <input type="text" id="cardname" placeholder="Full Name" required>  -->
+                    <label for="country">SELECT CARD
+                        <select name="country" id="country">
+                            <option value="Card">Choose the Card</option>
+                            <option value="Debit Card">Debit Card</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <!-- <option value="india">india</option> -->
+        
+                        </select>
+                    </label>
                 </div>
 
-                <div class="inputBox">
-                    <span>Credit Card number :</span>
-                    <input type="text" id="cardno"  placeholder="1111-2222-3333-4444" required>
+                <div class="inputBox  icon-relative">
+                    <span>Card number :</span>
+                    <input type="text" id="cardno" data-mask="0000 0000 0000 0000" placeholder="1111-2222-3333-4444" required>
                 </div>
 
                 <div class="inputBox">
                     <span>Exp Month :</span>
-                    <input type="text" id="exp" placeholder="january" required>
+                    <input type="month" id="exp" placeholder="january" required>
                 </div>
 
                 <div class="flex">
                     <div class="inputBox">
                         <span>Exp Year :</span>
-                        <input type="text" id="expyear" placeholder="2022" required>
+                        <input type="year" id="expyear" placeholder="2022" required>
                     </div>
 
                     <div class="inputBox">
@@ -100,7 +109,10 @@
             </div>
     
         </div>
-
+        <label id="dola" for="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox" />
+            <p>The Payment Address and Delivery Address are the same.</p>
+        </label>
         <!-- <input type="submit" value="proceed to checkout" class="submit-btn"> -->
         <button type="submit" class="btn" id="paymentSubmit">Placed order</button>
             <div class="popup " id="popup">

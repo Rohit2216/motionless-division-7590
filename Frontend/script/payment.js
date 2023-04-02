@@ -54,6 +54,9 @@ function openPopup(event) {
 
 function closePopup(event) {
     // event.preventDefault();
+   
   let popup = document.querySelector('.popup');
   popup.classList.remove('open-popup');
+  
 }
+
