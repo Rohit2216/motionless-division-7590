@@ -19,7 +19,7 @@ function myFunction() {
       };
       // console.log(payload);
 
-      fetch("http://localhost:8800/users/login", {
+      fetch("https://plain-jeans-cod.cyclic.app/users/login", {
         method: "POST",
         headers: {
           "Content-type": "application/json"
