@@ -489,7 +489,7 @@
   const filterElement = document.querySelector('#filter');
 
   function displayProducts() {
-    fetch("http://localhost:8800/product/")
+    fetch("https://plain-jeans-cod.cyclic.app/product/")
       .then(response => response.json())
       .then(data => {
         display(data)
@@ -568,7 +568,7 @@
     //         });
     // })
     try {
-      let res = await fetch("http://localhost:8800/product/");
+      let res = await fetch("https://plain-jeans-cod.cyclic.app/product/");
       let result = await res.json();
       //    result=result.sort((a,b)=>{a.price-b.price})
       if (selectedSort === 'asc') {

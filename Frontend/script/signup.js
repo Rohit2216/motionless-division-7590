@@ -21,7 +21,7 @@ function myFunction() {
       // console.log(payload);
 
       try {
-        const response = await fetch("http://localhost:8800/users/register", {
+        const response = await fetch("https://plain-jeans-cod.cyclic.app/users/register", {
           method: "POST",
           headers: {
             "Content-type": "application/json",
