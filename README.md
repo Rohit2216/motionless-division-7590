@@ -3,8 +3,8 @@
 # sephora.com_Clone_Project
 ---
 
- This project is a clone of HealthKart.com which is an online portal for Dietary supplements and health devices in the Health care industry in India. Prashant Tandon and Sameer Maheshwari founded the company in 2011.
- This company lead to the expansion of Fitness, Weight gain, Weight loss etc categories further in the e-health space. 
+ This project is a clone of Sephora.nnnow.com Sephora
+ India online is a powerful beauty presence in the digital space, thanks to its unparalleled assortment of prestige products in every category, unbiased service from beauty experts, interactive shopping environment, and innovation.
 
 
 ----
@@ -22,7 +22,7 @@ The tech Stack we used for creating this webiste are:-
 ## Landing Page
 -----
 
-The Landing page of sephora.com displays the navigation bar for products, Learn about a particular product, pricing for the product, Cart Page and the login & signup part, along with the Popular in Various categories, Just launched Products.
+The Landing page of sephora.com displays the navigation bar for products, Learn about a particular product, pricing for the product, Cart Page and the login & signup part, along with the Popular in Various categories.
 
 
 ![landing page](https://github.com/Rohit2216/motionless-division-7590/blob/main/Frontend/images/landing.png?raw=true  "Logo Title Text 1")
@@ -33,7 +33,7 @@ We used javascript to append various products in HTML page using an array of obj
 ## Signup Page
 -----
 
-There have no account to first to create the acount. There be need to E-mail account  and the mobile no. also then set the strong password  and again re-enter the same password. then click the signup. they also redirect to  login page.
+There have no account to first to create the acount. There be need to E-mail account  and the mobile no. also then set the strong password. then click the signup. they also redirect to  login page.
 
 ![landing page](https://github.com/Rohit2216/motionless-division-7590/blob/main/Frontend/images/register.png?raw=true "Logo Title Text 1")
 
@@ -41,7 +41,7 @@ There have no account to first to create the acount. There be need to E-mail acc
 ## Login Page
 -----
 
-After the successful completion of the signup, your mobile number, username and password are stored in the local storage and you can log in with that credentials, if the mobile number and password are incorrect it will fail the validation and you cannot log in to the website.
+After the successful completion of the signup, your email and password are stored in the local storage and you can log in with that credentials, if the email and password are incorrect it will fail the validation and you cannot log in to the website.
 
 ![landing page](https://github.com/Rohit2216/motionless-division-7590/blob/main/Frontend/images/login.png?raw=true "Logo Title Text 1")
 
@@ -70,12 +70,12 @@ Besides that, you can place an order by clicking on the "Place Order" button.
 The address is taken from the user and sent to localStorage so this address could be used further used in the payment page to select from multiple addresses entered.
 The idea was to make a payment page that is not functional, but the carrier can take the dummy input that the user provides. basically, it was just a dummy Static page with a minimum amount of CSS present.
 
-![landing page](https://github.com/Rohit2216/gas-scarecrow-3264/blob/main/images/2023-01-28%20(6).png?raw=true  "Logo Title Text 1")
+![landing page](https://github.com/Rohit2216/motionless-division-7590/blob/main/Frontend/images/payment.png?raw=true  "Logo Title Text 1")
 
 
 ## Footer Page
 ------
 
-this is the footer part of my website. There have some data to  our site what's their office and what's contact no. and connect to E-mail id. also.
+This is the footer part of my website. There have some data to  our site and their products.
 
 ![landing page](https://github.com/Rohit2216/motionless-division-7590/blob/main/Frontend/images/footer.png?raw=true  "Logo Title Text 1")
