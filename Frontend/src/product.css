@@ -375,6 +375,7 @@
 
     #footer {
       margin-top: 50px;
+      width:98%;
     }
 
     #footer h3 {
@@ -421,19 +422,25 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       /* Creates 3 columns */
+      /* height: 100px; */
 
     }
 
     .productData>div {
-      gap: 50px;
+      gap: 30px;
       /* border:2px solid red; */
-      /* width: 30%; */
-      margin-bottom: 30px;
-      margin-left: 10px;
-      margin-right: 10px;
+      width: 75%;
+      margin-bottom: 60px;
+      margin-left: 30px;
+      /* margin-right: 30px; */
+      
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       border-top-left-radius: 50px;
       border-bottom-right-radius: 50px;
+      
+    }
+    .productData > div:hover{
+      transform: scale(1.1);
     }
 
 

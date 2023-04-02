@@ -188,3 +188,58 @@ input{
 #paymentSubmit:hover{
     background-color: green;
 }
+
+
+/* .icon-relative{
+  position: relative;
+} */
+
+/* .inputBox input[type="text"]:focus {
+  border-color: blue;
+  outline: none;
+} */
+
+
+
+form label {
+  color: var(--text-color);
+  text-transform: uppercase;
+  position: relative;
+  font-size: 10px;
+  word-spacing: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+form select {
+  width: 100%;
+  outline: none;
+  border: none;
+  /* text-decoration:dashed; */
+  border-bottom: 1px solid rgb(223, 223, 223);
+  text-transform: capitalize;
+  padding-top: 3px;
+  color: var(--text-color);
+  padding-bottom: 3px;
+  font-size: 15px;
+  margin-left: -3px;
+  margin-bottom: 20px;
+  background-color: transparent;
+
+}
+
+
+#dola {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+#dola input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#dola p {
+  margin: 0;
+}

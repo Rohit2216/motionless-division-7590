@@ -13,6 +13,110 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
     integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Overall page styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Cart container styles */
+.cart-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.cart-items {
+  margin-top: 20px;
+}
+
+/* Promo section styles */
+.rightPromoDiv {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+}
+
+.promoHeading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.promoinputlabel {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.promoInputDiv {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.promoInput {
+  flex: 1;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.promoApplyButton {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.subtotalDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.subtototalText {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.subtotalNumber {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.shippingDuty {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.proceedToCheckout {
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.itemAvailability {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#manish{
+    display: flex;
+}
+    </style>
 </head>
 
 <body>
@@ -51,13 +155,34 @@
             <div>BATH & BODY</div>
             <div>BRANDS</div>
         </div>
+        <div id="manish">
+            <div class="cart-container">
+                <h1>Cart</h1>
+                <div class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+            </div>
 
-        <div class="cart-container">
-            <h1>Cart</h1>
-            <div class="cart-items">
-                <!-- Cart items will be dynamically added here -->
+            <div class="rightPromoDiv">
+                <p class="promoHeading">promos & offers</p>
+                <p class="promoinputlabel">Enter promo code</p>
+                <div class="promoInputDiv">
+                    <input type="text" class="promoInput">
+                    <buttom class="promoApplyButton">APPLY</buttom>
+    
+                </div>
+                <div class="subtotalDiv">
+                    <p class="subtototalText">Subtotal</p>
+                    <p class="subtotalNumber">INR <span id="grandTotal"></span></p>
+                </div>
+                <p class="shippingDuty">Shipping, duties & taxes calculated at checkout (if applicable)</p>
+                <a href="./payment2.html">
+                    <button class="proceedToCheckout">PROCEED TO CHECKOUT</button>
+                </a>
+                <p class="itemAvailability">Item availability and pricing are not guaranteed.</p>
             </div>
         </div>
+        
     </div>
 
 </body>
