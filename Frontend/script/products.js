@@ -34,12 +34,12 @@ function display(data) {
 
       const titleElement = document.createElement("p");
       titleElement.classList.add("product-title");
-      titleElement.textContent = `$${product.title}`;
+      titleElement.textContent = `${product.title}`;
       productElement.appendChild(titleElement);
 
       const priceElement = document.createElement("h2");
       priceElement.classList.add("product-price");
-      priceElement.textContent = `$${product.price}`;
+      priceElement.textContent = `Rs. ${product.price}`;
       productElement.appendChild(priceElement);
 
 
