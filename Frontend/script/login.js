@@ -31,7 +31,7 @@ function myFunction() {
           localStorage.setItem("token", res.token);
           console.log(res);
           alert(res.msg);
-          window.location.href = "index.html";
+          window.location.href = "products.html";
         })
         .catch(err => console.log(err))
     });
