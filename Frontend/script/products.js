@@ -39,7 +39,7 @@ function display(data) {
 
       const priceElement = document.createElement("h2");
       priceElement.classList.add("product-price");
-      priceElement.textContent = `Rs. ${product.price}`;
+      priceElement.textContent = ` ₹${product.price}`;
       productElement.appendChild(priceElement);
 
 
@@ -57,6 +57,8 @@ function display(data) {
   }
 
 }
+
+
 const sortSelect = document.getElementById('sort1');
 
 sortSelect.addEventListener('change', async () => {
@@ -103,6 +105,9 @@ sortSelect.addEventListener('change', async () => {
   ;
 });
 
+
+
+
 // function addToCart(product) {
 //   // Implement adding product to cart here
 //   console.log(`Product "${product.name}" added to cart`);
@@ -131,7 +136,8 @@ alert("Product added to cart successfully");
 
   // displayProducts();
 
-
+  
+  
 
 
 

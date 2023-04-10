@@ -224,7 +224,7 @@ function displayCartItems(cartItems) {
 
     const priceElement = document.createElement("h2");
     priceElement.classList.add("item-price");
-    priceElement.textContent = `Rs. ${item.price}`;
+    priceElement.textContent = `₹${item.price}`;
     itemElement.appendChild(priceElement);
     totalPrices(item)
     // totalPrice += Number(item.price) * item.quantity;
@@ -292,7 +292,7 @@ function displayCartItems(cartItems) {
     cartItemsContainer.appendChild(itemElement);
   });
   
-  totalPriceElement.textContent = `Rs. ${totalPrice.toFixed(2)}`;
+  totalPriceElement.textContent = ` ₹${totalPrice.toFixed(2)}`;
 }
 
 function totalPrices(item){
