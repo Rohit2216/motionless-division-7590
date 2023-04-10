@@ -720,3 +720,84 @@ nav>ul>li a{
   background-color: #ed02c2;
   color: #fff;
 }
+
+
+
+@media screen and (max-width: 480px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 5px;
+  }
+
+  #navbar img:first-of-type {
+    margin-bottom: 10px;
+  }
+
+  #navbar a {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  #search {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  #search i {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  #search input[type="text"] {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #search img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* CSS for screen sizes less than or equal to 768px */
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  #just-landed {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #just-image {
+    margin: 10px 0;
+  }
+  
+  #video p {
+    font-size: 1.2rem;
+  }
+}
+
+/* For screens smaller than 480px */
+@media screen and (max-width: 480px) {
+  #just-landed {
+    margin: 10px;
+  }
+  
+  #just-image {
+    display: none;
+  }
+  
+  #video p {
+    font-size: 1rem;
+  }
+}
+
