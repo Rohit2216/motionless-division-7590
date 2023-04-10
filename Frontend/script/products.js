@@ -39,7 +39,7 @@ function display(data) {
 
       const priceElement = document.createElement("h2");
       priceElement.classList.add("product-price");
-      priceElement.textContent = ` ₹${product.price}`;
+      priceElement.textContent = `₹${product.price}`;
       productElement.appendChild(priceElement);
 
 
