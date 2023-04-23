@@ -3,7 +3,7 @@ const sortElement = document.querySelector('#sort');
 const filterElement = document.querySelector('#filter');
 
 function displayProducts() {
-  fetch("https://plain-jeans-cod.cyclic.app/product/")
+  fetch("https://gold-elated-turtle.cyclic.app/product/")
     .then(response => response.json())
     .then(data => {
       display(data)
@@ -84,7 +84,7 @@ sortSelect.addEventListener('change', async () => {
   //         });
   // })
   try {
-    let res = await fetch("https://plain-jeans-cod.cyclic.app/product/");
+    let res = await fetch("https://gold-elated-turtle.cyclic.app/product/");
     let result = await res.json();
     //    result=result.sort((a,b)=>{a.price-b.price})
     if (selectedSort === 'asc') {

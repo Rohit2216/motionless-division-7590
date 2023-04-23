@@ -21,7 +21,7 @@ function myFunction() {
       // console.log(payload);
 
       try {
-        const response = await fetch("https://plain-jeans-cod.cyclic.app/users/register", {
+        const response = await fetch("https://gold-elated-turtle.cyclic.app/users/register", {
           method: "POST",
           headers: {
             "Content-type": "application/json",

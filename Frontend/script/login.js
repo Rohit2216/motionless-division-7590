@@ -19,7 +19,7 @@ function myFunction() {
       };
       // console.log(payload);
 
-      fetch("https://plain-jeans-cod.cyclic.app/users/login", {
+      fetch("https://gold-elated-turtle.cyclic.app/users/login", {
         method: "POST",
         headers: {
           "Content-type": "application/json"
