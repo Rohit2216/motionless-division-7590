@@ -723,21 +723,11 @@ nav>ul>li a{
 
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 960px) {
   #navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 5px;
+    display: none;
   }
 
-  #navbar img:first-of-type {
-    margin-bottom: 10px;
-  }
-
-  #navbar a {
-    margin-right: 0;
-    margin-bottom: 5px;
-  }
 }
 
 
@@ -760,8 +750,8 @@ nav>ul>li a{
   }
 
   #search img {
-    width: 100%;
-    height: auto;
+    width: 10%;
+    height: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
