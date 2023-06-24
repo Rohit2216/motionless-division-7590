@@ -754,12 +754,9 @@ nav>ul>li a{
 }
 
 
-@media (max-width: 768px) {
-  /* Adjust the breakpoint (768px) as needed */
-
+@media (max-width: 480px) {
   #search {
     flex-wrap: wrap;
-    justify-content: center;
   }
 
   #search input[type="text"] {
@@ -768,8 +765,27 @@ nav>ul>li a{
   }
 
   #search img {
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+  }
+
+  #search a:last-child {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust the breakpoint (768px) as needed */
+
+  #search input[type="text"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #search img {
     margin: 10px;
-    width:70px;
+    width: 70px;
     height: 70px;
   }
 
@@ -908,7 +924,7 @@ nav>ul>li a{
 }
 
 /* For screens smaller than 480px */
-@media screen and (max-width: 240px) {
+@media screen and (max-width: 480px) {
   #just-landed {
     display: grid;
     grid-template-columns: repeat(1,1fr);
@@ -967,18 +983,21 @@ nav>ul>li a{
     grid-template-columns: repeat(2,1fr);
     justify-content: space-evenly;
     color: white;
-    margin-top: 50px;
+    /* margin-top: 50px;
     padding: 30px;
-    gap: 10px;
+    gap: 10px; */
     cursor: pointer;
     margin: auto;
-    border:2px solid red;
+    width: 100%;
+    /* border:2px solid red; */
+    /* margin-left: 100px; */
   }
   
   #black-box div:nth-child(1){
     border: 2px solid black;
     background-color: black;
     padding: 50px;
+    /* margin-left:100px; */
     width: 35%;
     
   }
@@ -1021,3 +1040,7 @@ nav>ul>li a{
 }
 
 
+@media screen and (max-width: 320px) {
+
+
+}
