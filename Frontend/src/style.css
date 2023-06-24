@@ -805,14 +805,18 @@ nav>ul>li a{
   }
 
   #search input[type="text"] {
-    width: 100%;
-    margin: 10px 0;
+    display: none;
+    /* margin: 10px 0; */
+  }
+
+  #searchicon{
+    display: none;
   }
 
   #search img {
-    margin: 5px;
-    width: 20px;
-    height: 20px;
+    margin: 15px;
+    width: 60px;
+    height: 60px;
   }
 
   #search a:last-child {
@@ -822,8 +826,7 @@ nav>ul>li a{
 
 @media screen and (max-width: 260px) {
   #search input[type="text"] {
-    width: 80%;
-    margin: 10px 0;
+  display: none;
   }
 
   #search img {
@@ -1025,6 +1028,7 @@ nav>ul>li a{
     justify-content: space-evenly;
     color: white;
     width: 100%;
+    margin-top: -200px;
   }
 
   #black-box div:nth-child(1) {
@@ -1078,59 +1082,77 @@ nav>ul>li a{
 
 @media screen and (max-width: 320px) {
   #search {
-    flex-wrap: wrap;
+    display:flex;
   }
 
   #search input[type="text"] {
-    width: 100%;
+    /* display: none; */
     margin: 10px 0;
   }
 
+  /* #searchicon{
+    display: none;
+  } */
+
   #search img {
-    width: 15px;
-    height: 15px;
+    margin: 15px;
+    width: 60px;
+    height: 60px;
   }
 
   #search a:last-child {
     margin-top: 10px;
+  }
+  #footer3 img {
+    margin-left:-100px;
+    
   }
 }
 
 @media screen and (max-width: 480px) {
-  #search {
-    flex-wrap: wrap;
-    justify-content: center;
+  
+    #search {
+      display:flex;
+    }
   }
 
   #search input[type="text"] {
-    width: 100%;
-    margin: 10px 0;
+    display: none;
+    /* margin: 10px 0; */
+  }
+
+  #searchicon{
+    display: none;
   }
 
   #search img {
-    margin: 5px;
-    width: 20px;
-    height: 20px;
+    /* margin: 15px; */
+    width: 60px;
+    height: 60px;
   }
 
-  #search a:last-child {
-    margin-top: 10px;
-  }
-}
-
+  
 @media screen and (max-width: 240px) {
+  #search input[type="text"] {
+    display: none;
+    /* margin: 10px 0; */
+  }
   #search {
-    flex-direction: column;
-    align-items: center;
+    display:flex;
   }
 
-  #search input[type="text"] {
-    width: 80%;
-    margin: 10px 0;
+  #searchicon{
+    display: none;
   }
 
   #search img {
-    width: 15px;
-    height: 15px;
+    /* margin: 15px; */
+    width: 40px;
+    height: 40px;
+  }
+
+  #footer3 img {
+    margin-left:-100px;
+    
   }
 }
