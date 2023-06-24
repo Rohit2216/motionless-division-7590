@@ -745,16 +745,13 @@ nav>ul>li a{
 }
 
 
-
 @media screen and (max-width: 1000px) {
   #navbar {
     display: none;
   }
-
 }
 
-
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   #search {
     flex-wrap: wrap;
   }
@@ -773,9 +770,12 @@ nav>ul>li a{
   #search a:last-child {
     margin-top: 10px;
   }
+  #footer2 {
+    display :none;
+  }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /* Adjust the breakpoint (768px) as needed */
 
   #search input[type="text"] {
@@ -792,38 +792,38 @@ nav>ul>li a{
   #search a:last-child {
     margin-top: 10px;
   }
+  #footer2 {
+    display :none;
+  }
 }
 
-/* CSS for screen sizes less than or equal to 768px */
+/* CSS for screens smaller than or equal to 768px */
 
-/* For screens smaller than 768px */
 @media screen and (max-width: 768px) {
   #just-landed {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     width: 100%;
     flex-direction: column;
     align-items: center;
   }
-  
+
   #just-image {
     width: 100%;
-    /* border: 2px solid red; */
     display: flex;
     margin-left: 10px;
-  
   }
 
-  #just-image > div img{
-    width:50%;
+  #just-image > div img {
+    width: 50%;
   }
-  
+
   #video p {
     font-size: 1.2rem;
   }
-  #video{
-    width:100%;
-    /* border:2px solid red; */
+
+  #video {
+    width: 100%;
   }
 
   #block2 {
@@ -834,15 +834,14 @@ nav>ul>li a{
     margin: 20px;
     cursor: pointer;
   }
-  
+
   #block2 img {
     width: 98%;
-    /* display: block; */
   }
 
   #black-box {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
     color: white;
     margin-top: 50px;
@@ -850,50 +849,48 @@ nav>ul>li a{
     gap: 10px;
     cursor: pointer;
     margin: auto;
-    /* border:2px solid red; */
   }
-  
-  #black-box div:nth-child(1){
+
+  #black-box div:nth-child(1) {
     border: 2px solid black;
     background-color: black;
     padding: 50px;
     width: 35%;
-    
   }
-   #black-box div:nth-child(2){
+
+  #black-box div:nth-child(2) {
     border: 2px solid black;
     background-color: black;
     padding: 50px;
     width: 35%;
-    
   }
-   #black-box div:nth-child(3){
+
+  #black-box div:nth-child(3) {
     border: 2px solid black;
     background-color: black;
     padding: 50px;
     width: 35%;
-    
   }
-  #black-box div:nth-child(4){
+
+  #black-box div:nth-child(4) {
     border: 2px solid black;
     background-color: black;
     padding: 50px;
     width: 35%;
-    
   }
-  #black-box div:nth-child(5){
+
+  #black-box div:nth-child(5) {
     border: 2px solid black;
     background-color: black;
     padding: 50px;
     width: 35%;
-    
   }
-  #black-box div:nth-child(6){
+
+  #black-box div:nth-child(6) {
     border: 2px solid black;
     background-color: black;
     padding: 50px;
     width: 35%;
-    
   }
 
   #subs>div {
@@ -914,54 +911,49 @@ nav>ul>li a{
     width: 20%;
     transition: 2s;
   }
-  
+
   .slide img {
-    /* width: 900px; */
-    /* width:10%; */
     height: 300px;
   }
-
 }
 
-/* For screens smaller than 480px */
+/* CSS for screens smaller than or equal to 480px */
+
 @media screen and (max-width: 480px) {
   #just-landed {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     width: 100%;
     flex-direction: column;
   }
-    #just-image {
-      width: 100%;
-      /* border: 2px solid red; */
-      display: flex;
-      margin-left: 10px;
-    
-    }
-  
-    #just-image > div img{
-      width:100%;
-    }
-  
+
+  #just-image {
+    width: 100%;
+    display: flex;
+    margin-left: 10px;
+  }
+
+  #just-image > div img {
+    width: 100%;
+  }
+
   #video p {
     font-size: 1rem;
   }
-   #video video {
-    width:100%;
-    /* border:2px solid red; */
+
+  #video video {
+    width: 100%;
     margin-top: -80px;
-    /* padding-bottom: -100px; */
   }
 
   #spring {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    /* justify-content: space-evenly; */
     margin: 20px;
-    /* border:2px solid red; */
     cursor: pointer;
   }
+
   #spring img {
     margin: auto;
   }
@@ -974,85 +966,71 @@ nav>ul>li a{
     margin: 20px;
     cursor: pointer;
   }
-  
+
   #block2 img {
     width: 98%;
-    /* display: block; */
   }
 
-
-  #video{
-    width:60%;
-    /* border:2px solid red; */
+  #video {
+    width: 60%;
   }
 
-  .containers{
+  .containers {
     display: none;
   }
+
   #black-box {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-evenly;
     color: white;
-    /* margin-top: 50px;
-    padding: 30px;
-    gap: 10px; */
-    cursor: pointer;
-    margin: auto;
     width: 100%;
-    /* border:2px solid red; */
-    /* margin-left: 100px; */
-  }
-  
-  #black-box div:nth-child(1){
-    border: 2px solid black;
-    background-color: black;
-    padding: 50px;
-    /* margin-left:100px; */
-    width: 35%;
-    
-  }
-   #black-box div:nth-child(2){
-    border: 2px solid black;
-    background-color: black;
-    padding: 50px;
-    width: 35%;
-    
-  }
-   #black-box div:nth-child(3){
-    border: 2px solid black;
-    background-color: black;
-    padding: 50px;
-    width: 35%;
-    
-  }
-  #black-box div:nth-child(4){
-    border: 2px solid black;
-    background-color: black;
-    padding: 50px;
-    width: 35%;
-    
-  }
-  #black-box div:nth-child(5){
-    border: 2px solid black;
-    background-color: black;
-    padding: 50px;
-    width: 35%;
-    
   }
 
-  #black-box div:nth-child(6){
+  #black-box div:nth-child(1) {
     border: 2px solid black;
     background-color: black;
     padding: 50px;
     width: 35%;
-    
+  }
+
+  #black-box div:nth-child(2) {
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+  }
+
+  #black-box div:nth-child(3) {
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+  }
+
+  #black-box div:nth-child(4) {
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+  }
+
+  #black-box div:nth-child(5) {
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+  }
+
+  #black-box div:nth-child(6) {
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
   }
 }
 
-
 @media screen and (max-width: 320px) {
-
   #search {
     flex-wrap: wrap;
   }
@@ -1063,7 +1041,6 @@ nav>ul>li a{
   }
 
   #search img {
-    /* margin: 5px; */
     width: 15px;
     height: 15px;
   }
@@ -1071,5 +1048,43 @@ nav>ul>li a{
   #search a:last-child {
     margin-top: 10px;
   }
+}
 
+@media screen and (max-width: 480px) {
+  #search {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #search input[type="text"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #search img {
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+  }
+
+  #search a:last-child {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  #search {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #search input[type="text"] {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  #search img {
+    width: 15px;
+    height: 15px;
+  }
 }
