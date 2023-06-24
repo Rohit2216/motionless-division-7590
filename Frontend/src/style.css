@@ -797,6 +797,41 @@ nav>ul>li a{
   }
 }
 
+@media screen and (max-width: 480px) {
+  #search {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #search input[type="text"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #search img {
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+  }
+
+  #search a:last-child {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 260px) {
+  #search input[type="text"] {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  #search img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
 /* CSS for screens smaller than or equal to 768px */
 
 @media screen and (max-width: 768px) {
@@ -971,8 +1006,13 @@ nav>ul>li a{
     width: 98%;
   }
 
+  #video p {
+    font-size: 1.2rem;
+  }
+
   #video {
-    width: 60%;
+    width: 100%;
+    /* height:400px; */
   }
 
   .containers {
@@ -990,6 +1030,7 @@ nav>ul>li a{
   #black-box div:nth-child(1) {
     border: 2px solid black;
     background-color: black;
+    margin: 20px;
     padding: 50px;
     width: 35%;
   }
@@ -997,6 +1038,7 @@ nav>ul>li a{
   #black-box div:nth-child(2) {
     border: 2px solid black;
     background-color: black;
+    margin: 20px;
     padding: 50px;
     width: 35%;
   }
@@ -1004,6 +1046,7 @@ nav>ul>li a{
   #black-box div:nth-child(3) {
     border: 2px solid black;
     background-color: black;
+    margin: 20px;
     padding: 50px;
     width: 35%;
   }
@@ -1011,6 +1054,7 @@ nav>ul>li a{
   #black-box div:nth-child(4) {
     border: 2px solid black;
     background-color: black;
+    margin: 20px;
     padding: 50px;
     width: 35%;
   }
@@ -1018,6 +1062,7 @@ nav>ul>li a{
   #black-box div:nth-child(5) {
     border: 2px solid black;
     background-color: black;
+    margin: 20px;
     padding: 50px;
     width: 35%;
   }
@@ -1025,6 +1070,7 @@ nav>ul>li a{
   #black-box div:nth-child(6) {
     border: 2px solid black;
     background-color: black;
+    margin: 20px;
     padding: 50px;
     width: 35%;
   }
