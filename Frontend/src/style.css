@@ -175,6 +175,8 @@
   width: 500%;
   height: 500px;
   display: flex;
+  /* border:2px solid red; */
+
   
 }
 
@@ -202,9 +204,28 @@
   justify-content: center;
 
   margin-left: 150px;
+  /* border: 2px solid red;  */
   
 
 
+}
+
+@media (max-width: 768px) {
+  /* Adjust the breakpoint (768px) as needed */
+
+  .navigation-manual {
+    display: none;
+    /* width:50%;
+    margin-left: -200px;
+    justify-content: center;
+    bottom: 20px; Adjust the positioning as needed */
+  }
+  .slides input{
+    display: none;
+  }
+  .navigation-auto div{
+    display: none;
+  }
 }
 
 .manual-btn {
@@ -522,6 +543,7 @@
   margin-top:-20px;
 }
 
+
 #subs h1 {
   font-size: 24px;
   margin-top: 20px;
@@ -694,6 +716,7 @@ nav>ul>li a{
   display: grid;
   grid-template-columns: repeat(8,1fr);
   /* border:2px solid red; */
+  justify-content: space-between;
   width:98%;
 
   margin-left:20px;
@@ -723,7 +746,7 @@ nav>ul>li a{
 
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1000px) {
   #navbar {
     display: none;
   }
@@ -731,29 +754,27 @@ nav>ul>li a{
 }
 
 
-@media screen and (max-width: 767px) {
-  #search {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-    margin-top: 0;
-  }
+@media (max-width: 768px) {
+  /* Adjust the breakpoint (768px) as needed */
 
-  #search i {
-    margin-left: 0;
-    margin-bottom: 10px;
+  #search {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   #search input[type="text"] {
     width: 100%;
-    margin-left: 0;
+    margin: 10px 0;
   }
 
   #search img {
-    width: 10%;
-    height: 10px;
+    margin: 10px;
+    width:70px;
+    height: 70px;
+  }
+
+  #search a:last-child {
     margin-top: 10px;
-    margin-bottom: 10px;
   }
 }
 
@@ -762,6 +783,135 @@ nav>ul>li a{
 /* For screens smaller than 768px */
 @media screen and (max-width: 768px) {
   #just-landed {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #just-image {
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    margin-left: 10px;
+  
+  }
+
+  #just-image > div img{
+    width:50%;
+  }
+  
+  #video p {
+    font-size: 1.2rem;
+  }
+  #video{
+    width:100%;
+    /* border:2px solid red; */
+  }
+
+  #block2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: space-evenly;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  #block2 img {
+    width: 98%;
+    /* display: block; */
+  }
+
+  #black-box {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-evenly;
+    color: white;
+    margin-top: 50px;
+    padding: 30px;
+    gap: 10px;
+    cursor: pointer;
+    margin: auto;
+    /* border:2px solid red; */
+  }
+  
+  #black-box div:nth-child(1){
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+    
+  }
+   #black-box div:nth-child(2){
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+    
+  }
+   #black-box div:nth-child(3){
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+    
+  }
+  #black-box div:nth-child(4){
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+    
+  }
+  #black-box div:nth-child(5){
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+    
+  }
+  #black-box div:nth-child(6){
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+    
+  }
+
+  #subs>div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #subs input[type="email"] {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #subs button {
+    margin: 10px;
+  }
+
+  .slide {
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img {
+    /* width: 900px; */
+    /* width:10%; */
+    height: 300px;
+  }
+
+}
+
+/* For screens smaller than 480px */
+@media screen and (max-width: 240px) {
+  #just-landed {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -771,23 +921,103 @@ nav>ul>li a{
     margin: 10px 0;
   }
   
-  #video p {
-    font-size: 1.2rem;
-  }
-}
-
-/* For screens smaller than 480px */
-@media screen and (max-width: 480px) {
-  #just-landed {
-    margin: 10px;
-  }
-  
-  #just-image {
-    display: none;
-  }
   
   #video p {
     font-size: 1rem;
   }
+
+  #spring {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+    /* justify-content: space-evenly; */
+    margin: 20px;
+    /* border:2px solid red; */
+    cursor: pointer;
+  }
+  #spring img {
+    margin: auto;
+  }
+
+  #block2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    justify-content: space-evenly;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  #block2 img {
+    width: 98%;
+    /* display: block; */
+  }
+
+
+  #video{
+    width:60%;
+    /* border:2px solid red; */
+  }
+
+  .containers{
+    display: none;
+  }
+  #black-box {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-evenly;
+    color: white;
+    margin-top: 50px;
+    padding: 30px;
+    gap: 10px;
+    cursor: pointer;
+    margin: auto;
+    border:2px solid red;
+  }
+  
+  #black-box div:nth-child(1){
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+    
+  }
+   #black-box div:nth-child(2){
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+    
+  }
+   #black-box div:nth-child(3){
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+    
+  }
+  #black-box div:nth-child(4){
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+    
+  }
+  #black-box div:nth-child(5){
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+    
+  }
+
+  #black-box div:nth-child(6){
+    border: 2px solid black;
+    background-color: black;
+    padding: 50px;
+    width: 35%;
+    
+  }
 }
+
 
