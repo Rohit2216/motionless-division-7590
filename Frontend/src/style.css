@@ -930,16 +930,27 @@ nav>ul>li a{
     grid-template-columns: repeat(1,1fr);
     width: 100%;
     flex-direction: column;
-    align-items: center;
   }
+    #just-image {
+      width: 100%;
+      /* border: 2px solid red; */
+      display: flex;
+      margin-left: 10px;
+    
+    }
   
-  #just-image {
-    margin: 10px 0;
-  }
-  
+    #just-image > div img{
+      width:100%;
+    }
   
   #video p {
     font-size: 1rem;
+  }
+   #video video {
+    width:100%;
+    /* border:2px solid red; */
+    margin-top: -80px;
+    /* padding-bottom: -100px; */
   }
 
   #spring {
@@ -1042,5 +1053,23 @@ nav>ul>li a{
 
 @media screen and (max-width: 320px) {
 
+  #search {
+    flex-wrap: wrap;
+  }
+
+  #search input[type="text"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #search img {
+    /* margin: 5px; */
+    width: 15px;
+    height: 15px;
+  }
+
+  #search a:last-child {
+    margin-top: 10px;
+  }
 
 }
