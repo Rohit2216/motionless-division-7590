@@ -733,12 +733,12 @@ top: 1; */
 }
 
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
   #navbar {
     display: none;
   }
 
-}
+} */
 
 
 @media (max-width: 768px) {

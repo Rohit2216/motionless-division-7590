@@ -14,6 +14,9 @@
         integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        <link rel="website icon" type="png"
+        href="./images/Beauty Art.jpeg">
+
 </head>
 
 <body>
@@ -33,8 +36,13 @@
     <div id="search">
       <a href="./index.html"><img src="./images/Beauty Art.jpeg" alt=""></a>
 
-      <i class="fa fa-magnifying-glass" style="color: black;"></i>
-      <input type="text" placeholder="Search...">
+     
+        <i class="fa fa-search" id="search-icon" class="search-container"></i>
+        <input type="text" id="search-input" placeholder="Search...">
+      
+      <div class="result-container" id="result-container">
+        <!-- Results will be displayed here -->
+      </div>
       <a href="./cart.html" style="display: inline-block; width: 40px; height: 40px;">
           <i class="fa-solid fa-bag-shopping" style="color: black; font-size: 40px;"></i>
       </a>

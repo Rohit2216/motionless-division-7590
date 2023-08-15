@@ -6,7 +6,6 @@ function myFunction() {
     x.type = "password";
   }
 }
-
 const form = document.querySelector("#register-form");
 if (form) {
   form.addEventListener("submit", async (e) => {
@@ -18,8 +17,7 @@ if (form) {
       email: form.elements.email.value,
       password: form.elements.password.value,
     };
-    // console.log(payload);
-
+    
     try {
       const response = await fetch("https://sephora-ul8o.onrender.com/users/register", {
         method: "POST",
@@ -31,7 +29,13 @@ if (form) {
       const data = await response.json();
       console.log(data);
       alert(data.msg);
-      window.location.href = "login.html";
+
+      if (response.ok) {
+        // Store user data in localStorage
+        localStorage.setItem("userData", JSON.stringify(payload));
+
+        window.location.href = "login.html";
+      }
     } catch (error) {
       console.error(error);
       alert("Registration failed. Please try again later.");

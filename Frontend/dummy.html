@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Art</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+        integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="website icon" type="png" href="./images/Beauty Art.jpeg">
+    <style>
+         #user-name {
+            margin-right: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #profile-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar">
+            <img src="https://cdn02.nnnow.com/web-images/master/navtree_metaData/59b2425ae4b0d70964ee66e0/1505806763887/12NNNOWLOGODESKTOP.png"
+                alt="">
+            <a href="https://sephora.nnnow.com/store-locator"><i class="fa fa-location-dot"
+                    style="color: black;"></i>Store
+                locator</a>
+            <img src="./images/star.jpg" alt="">
+            <a href="https://sephora.nnnow.com/apps"><img src="./images/booking.png" alt="">Get app</a>
+            <a href=""><img src="./images/tracking.png" alt="">Track Order</a>
+            <a href="./admin.login.html"><img src="./images/profile.png" alt="">Admin</a>
+        </div>
+        <div id="search">
+            <a href="./index.html"><img src="./images/Beauty Art.jpeg" alt=""></a>
+
+            <i class="fa fa-magnifying-glass" style="color: black;"></i>
+            <input type="text" placeholder="Search...">
+            <a href="./cart.html" style="display: inline-block; width: 40px; height: 40px;">
+                <i class="fa-solid fa-bag-shopping" style="color: black; font-size: 40px;"></i>
+            </a>
+            <!-- <a id="crt" href="./signup.html"> <img src="./images/log_in.png" alt="" style="width:55px; height:60px"></a> -->
+            <div id="user-name">User Name</div>
+            <img id="profile-image" src="./images/profile.png" alt="Profile Image">
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const userData = JSON.parse(localStorage.getItem("userData"));
+
+// Get the element where you want to display the user's name
+const userNameElement = document.getElementById("user-name");
+
+// Check if user data exists
+if (userData && userData.name) {
+    // Display the user's name in the element
+    userNameElement.textContent = `Welcome, ${userData.name}!`;
+} else {
+    userNameElement.textContent = "User data not found.";
+}
+
+</script>

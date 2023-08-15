@@ -528,3 +528,29 @@
     margin-bottom: 10px;
   }
 }
+
+
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#search-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: black;
+}
+
+#search-input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+  width: 100%;
+}
+
+.result-container {
+  margin-top: 20px;
+}
