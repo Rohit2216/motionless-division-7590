@@ -124,7 +124,7 @@
 
     #signing:hover {
       color: #fff;
-      background-color: #ed02c2;
+      /* background-color: #ed02c2; */
 
 
     }
@@ -448,9 +448,9 @@
 
 
     .productData img {
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      border-top-left-radius: 50px;
-      border-bottom-right-radius: 50px;
+      /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+      /* border-top-left-radius: 50px; */
+      /* border-bottom-right-radius: 50px; */
       cursor: pointer;
       width: 50%;
       margin-top: 10px;

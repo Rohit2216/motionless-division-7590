@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management App</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .product-image {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .product-title {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .product-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: green;
+            margin: 5px 0;
+        }
+
+        .edit-button,
+        .delete-button {
+            padding: 5px 10px;
+            margin-top: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+
+        .edit-button:hover,
+        .delete-button:hover {
+            background-color: #0056b3;
+        }
+
+        .edit-form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .edit-form label,
+        .edit-form input,
+        .edit-form button {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        #update-button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        #update-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="productdata"></div>
+    <div class="edit-form">
+        <h2>Edit Product</h2>
+        <label for="edit-name">Name:</label>
+        <input type="text" id="edit-name">
+        <label for="edit-title">Title:</label>
+        <input type="text" id="edit-title">
+        <label for="edit-price">Price:</label>
+        <input type="number" id="edit-price">
+        <button id="update-button">Update</button>
+    </div>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
+
+<script>
+const containerElement = document.querySelector('.productData');
+
+// Function to add a product to the cart
+function addToCart(product) {
+  // Retrieve existing cart items from local storage
+  const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  // Add the current product's ID to the cart items
+  cartItems.push(product.id);
+
+  // Store the updated cart items in local storage
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+  // You can also update the UI to indicate that the product has been added to the cart
+  alert("Product added to cart!");
+}
+
+// Function to display products
+function displayProducts(data) {
+  containerElement.innerHTML = "";
+
+  if (Array.isArray(data)) {
+    data.forEach(product => {
+      const productElement = document.createElement("div");
+      productElement.classList.add("product");
+
+      const imageElement = document.createElement("img");
+      imageElement.classList.add("product-image");
+      imageElement.src = product.image;
+      imageElement.alt = product.name;
+      productElement.appendChild(imageElement);
+
+      const nameElement = document.createElement("h2");
+      nameElement.classList.add("product-name");
+      nameElement.textContent = product.name;
+      productElement.appendChild(nameElement);
+
+      const titleElement = document.createElement("p");
+      titleElement.classList.add("product-title");
+      titleElement.textContent = product.title;
+      productElement.appendChild(titleElement);
+
+      const priceElement = document.createElement("h2");
+      priceElement.classList.add("product-price");
+      priceElement.textContent = `₹${product.price}`;
+      productElement.appendChild(priceElement);
+
+      // Add "Add to Cart" button
+      const buttonElement = document.createElement("button");
+      buttonElement.textContent = "Add to Cart";
+      buttonElement.addEventListener("click", () => {
+        addToCart(product);
+      });
+      productElement.appendChild(buttonElement);
+
+      containerElement.appendChild(productElement);
+    });
+  }
+}
+
+// Fetch and display products
+function fetchAndDisplayProducts() {
+  fetch("https://gold-elated-turtle.cyclic.app/product/")
+    .then(response => response.json())
+    .then(data => {
+      displayProducts(data);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
+
+// Initialize the page
+function init() {
+  fetchAndDisplayProducts();
+  // Other initialization tasks
+}
+
+// Call the init function to start everything
+init();
+
+updateButton.addEventListener("click", () => {
+    const updatedName = editNameInput.value;
+    const updatedTitle = editTitleInput.value;
+    const updatedPrice = editPriceInput.value;
+
+    if (!updatedName || !updatedTitle || !updatedPrice) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    const currentProductId = localStorage.getItem("cartItems"); // Fetch product ID from local storage
+
+    console.log(currentProductId);
+    
+    if (!currentProductId) {
+        console.error("Product ID not found in localStorage.");
+        return;
+    }
+
+    const updatedProduct = {
+        id: currentProductId,
+        name: updatedName,
+        title: updatedTitle,
+        price: updatedPrice,
+        // ... (other fields you might need to update)
+    };
+
+    const storedToken = localStorage.getItem("token");
+
+    if (!storedToken) {
+        console.error("Token not found in localStorage.");
+        return;
+    }
+
+    // Perform the actual API call to update the product on the server
+    fetch(`http://localhost:8800/product/update/${currentProductId}`, {
+        method: 'PATCH', // Use the appropriate HTTP method (PUT, PATCH, POST, etc.)
+        body: JSON.stringify(updatedProduct),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': storedToken // Include the token directly in the Authorization header
+        }
+    })
+        .then(response => response.json())
+        .then(updatedProductData => {
+            console.log("Updated product:", updatedProductData);
+
+            // Update the displayed product information with the updated data
+            updateDisplayedProduct(currentProductId, updatedProductData);
+
+            // Hide the edit form after update
+            editForm.style.display = "none";
+        })
+        .catch(error => {
+            console.error("Error updating product:", error);
+        });
+});
+
+
+// Function to update displayed product information
+function updateDisplayedProduct(productId, updatedProduct) {
+    const productElement = document.querySelector(`[data-product-id="${productId}"]`);
+    if (productElement) {
+        const nameElement = productElement.querySelector(".product-name");
+        const titleElement = productElement.querySelector(".product-title");
+        const priceElement = productElement.querySelector(".product-price");
+
+        nameElement.textContent = updatedProduct.name;
+        titleElement.textContent = updatedProduct.title;
+        priceElement.textContent = `₹${updatedProduct.price}`;
+    }
+}
+
+
+</script>
