@@ -62,6 +62,28 @@ userRouter.get("/details",(req,res)=>{
     // }
 })
 
+userRouter.get("/", async (req, res) => {
+    try {
+        const users = await UserModel.find({}, { password: 0 }); // Exclude password from the result
+        res.status(200).send(users);
+    } catch (error) {
+        res.status(500).send({"msg": "Error fetching users"});
+    }
+});
+
+userRouter.delete("/users/:id", async (req, res) => {
+    try {
+        const userId = req.params.id;
+
+        // Delete the user from the database
+        await UserModel.findByIdAndDelete(userId);
+
+        res.status(200).json({ message: "User deleted successfully" });
+    } catch (error) {
+        res.status(500).json({ message: "Error deleting user" });
+    }
+});
+
 module.exports={
     userRouter
 }
