@@ -423,6 +423,8 @@
     .productData {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      margin-top:20px;
+      font-size: 20px;
       /* Creates 3 columns */
       /* height: 100px; */
 
@@ -553,4 +555,66 @@
 
 .result-container {
   margin-top: 20px;
+}
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-button {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.page-button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+
+/* Style the select element */
+#sort1 {
+  appearance: none;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Style the arrow icon */
+#sort1::after {
+  content: '\25BC'; /* Unicode character for a down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Ignore clicks on the arrow */
+}
+
+/* Style when the select dropdown is open */
+#sort1:focus {
+  border: 2px solid #007bff; /* Change the border color when focused */
+}
+
+/* Style the options inside the select dropdown */
+#sort1 option {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Style the selected option */
+#sort1 option:checked {
+  background-color: #007bff;
+  color: #fff;
 }
